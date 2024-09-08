@@ -36,11 +36,11 @@ public class Book {
             return false;
         }
         Book a2 = (Book) other;
-        return author.equals(a2.author);
+        return author.equals(a2.author) && name.equals(a2.name) && year == a2.year;
     }
 
     @Override
     public int hashCode() {
-        return java.util.Objects.hash(year);
+        return java.util.Objects.hash(name, author, year);
     }
 }

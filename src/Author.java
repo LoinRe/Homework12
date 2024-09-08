@@ -26,11 +26,11 @@ public class Author {
             return false;
         }
         Author c2 = (Author) other;
-        return lastName.equals(c2.lastName);
+        return lastName.equals(c2.lastName) && firstName.equals(c2.firstName);
     }
 
     @Override
     public int hashCode() {
-        return java.util.Objects.hash(firstName);
+        return java.util.Objects.hash(firstName, lastName);
     }
 }
